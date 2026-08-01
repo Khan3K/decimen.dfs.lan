@@ -36,7 +36,6 @@ Fountain-coded animated QR codes. No cables. No network path. No pairing. No app
 
 ## 🎯 Overview
 
-**DECIMEN** is a **PHP port** of the optical file-transfer system from [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) (originally Vite + TypeScript). It runs as a self-contained web app on XAMPP/Apache, dropping the original's `node` / `npm` / TypeScript toolchain while keeping the same UX and protocol design.
 
 | 🧩 **Piece** | 📜 **Description** |
 |---|---|
@@ -442,22 +441,22 @@ Zero `npm`. Zero `node`. Zero `TypeScript`. Drop the folder in `htdocs/` and it 
 
 ---
 
-## 🙏 Related Work
+##  Related Work
 
 The idea of beaming a file from a screen to a camera using QR codes — and the observation that **fountain codes make the channel dramatically more robust** than naive sequential chunking — was arrived at independently in several places. This project is one of them. The other takes are all worth a look; they explore the same idea space with different trade-offs, and any of them may be a better fit for your use case.
 
 | Project | Year | Approach | Notes |
 |---|---|---|---|
-| [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) | — | Fountain-coded QR (LT) in the browser, Vite + TypeScript | The original TypeScript edition; this PHP port reuses the same protocol and UX design. |
+| [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) | — |inspiration QR (LT) in the browser, Vite + TypeScript | The TypeScript edition; this PHP port reuses the same protocol and UX design. |
 | [`mohankumarelec/airgapped-qr-code-transfer`](https://github.com/mohankumarelec/airgapped-qr-code-transfer) | — | Browser-based QR file transfer with compression and sequential chunking | Discovered after publicly demoing this project — convergent evolution in action. |
 | [`divan/txqr`](https://github.com/divan/txqr) | 2018 | Animated QR + fountain codes in Go | One of the earliest well-known takes; ships two excellent write-ups on why fountain coding beats sequential looping. |
 | [`sz3/libcimbar`](https://github.com/sz3/libcimbar) | — | Goes past QR entirely with a custom high-density color code | Purpose-built for the screen-to-camera channel; significantly higher goodput than any QR-only design. |
 
 > 💡 **Convergent evolution** is a good sign: it usually means the underlying constraints are real, and the idea is the natural shape of the solution. If you're researching this space, reading all four is time well spent.
 
-### 🙏 Acknowledgements
+###  Acknowledgements
 
-- **Original concept & UX** — [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) (Vite + TypeScript). This edition is a **faithful PHP port** of that work: same protocol, same UX, no `node` / `npm` / build step.
+- **inspiration & UX** — [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) (Vite + TypeScript). This edition is a **faithful PHP port** of that work: same protocol, same UX theme , no `node` / `npm` / build step.
 - **Vendored libraries** (each under their own license, see headers):
   - [Nayuki QR-Code-generator](https://github.com/nayuki/QR-Code-generator) — MIT
   - [zxing-cpp / zxing-wasm](https://github.com/Sec-ant/zxing-wasm) — Apache-2.0
