@@ -1,0 +1,5 @@
+# Uploaded payloads and received files are runtime data, not source.
+storage/*
+received/*
+!storage/.gitkeep
+!received/.gitkeep

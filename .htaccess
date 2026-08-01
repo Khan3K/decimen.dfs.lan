@@ -1,0 +1,57 @@
+# Decimen Optical Transfer — PHP edition
+#
+# Requirements:
+# - mod_php (php_value works only with the Apache PHP module, which is what
+#   XAMPP ships by default). If your setup uses php-fpm/cgi these directives
+#   are ignored — set the equivalents in php.ini instead (see README).
+# - AllowOverride All for this directory (XAMPP's httpd.conf sets this for
+#   htdocs).
+
+Options -Indexes
+
+# --- Upload / transfer limits --------------------------------------------
+php_value upload_max_filesize 64M
+php_value post_max_size 70M
+php_value max_execution_time 300
+php_value memory_limit 512M
+
+# --- MIME for the vendored WebAssembly module -----------------------------
+<IfModule mime_module>
+  AddType application/wasm .wasm
+  AddType application/javascript .js .mjs
+</IfModule>
+
+# --- Security headers -----------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "no-referrer"
+</IfModule>
+
+# The JSON API is volatile by nature.
+<FilesMatch "^api\.php$">
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "no-store"
+    Header always set Pragma "no-cache"
+  </IfModule>
+</FilesMatch>
+
+# The receiving page must never be cached with a stale state.
+<FilesMatch "^receive\.php$">
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "no-store"
+  </IfModule>
+</FilesMatch>
+
+# Don't expose uploaded payloads to directory listing.
+<FilesMatch "^\.(htaccess|htpasswd)$">
+  Require all denied
+</FilesMatch>
+
+# Nobody should be able to read the raw uploaded files by guessing a path
+# (they are stored under random hex ids anyway, but belt-and-braces).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^storage/ - [F,L]
+  RewriteRule ^received/ - [F,L]
+</IfModule>
