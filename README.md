@@ -1,39 +1,34 @@
 <div align="center">
 
-```
-██████╗ ███████╗ ██████╗██╗███╗   ███╗███████╗███╗   ██╗
-██╔══██╗██╔════╝██╔════╝██║████╗ ████║██╔════╝████╗  ██║
-██║  ██║█████╗  ██║     ██║██╔████╔██║█████╗  ██╔██╗ ██║
-██║  ██║██╔══╝  ██║     ██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║
-██████╔╝███████╗╚██████╗██║██║ ╚═╝ ██║███████╗██║ ╚████║
-╚═════╝ ╚══════╝ ╚═════╝╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝
-```
+# DECIMEN
 
-# ⚡ DECIMEN — Optical Transfer ⚡
-### _Send a file through nothing but light._
+### Optical File Transfer
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2"/>
-  <img src="https://img.shields.io/badge/Apache-2.4-D22128?style=for-the-badge&logo=apache&logoColor=white" alt="Apache 2.4"/>
-  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Vanilla JS"/>
-  <img src="https://img.shields.io/badge/QR-Fountain-FF6B6B?style=for-the-badge&logo=qrcode&logoColor=white" alt="Fountain QR"/>
-  <img src="https://img.shields.io/badge/No_NPM-success?style=for-the-badge" alt="No NPM"/>
-  <img src="https://img.shields.io/badge/No_Node-success?style=for-the-badge" alt="No Node"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"/>
-</p>
+**Send a file between two devices through nothing but a screen and a camera.**
 
-<p align="center">
-  <a href="#-overview"><img src="https://img.shields.io/badge/📖_Read_Docs-222?style=for-the-badge" alt="Docs"/></a>
-  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Quick_Start-222?style=for-the-badge" alt="Quick Start"/></a>
-  <a href="#-how-it-works"><img src="https://img.shields.io/badge/🧠_How_It_Works-222?style=for-the-badge" alt="How It Works"/></a>
-  <a href="#-api-reference"><img src="https://img.shields.io/badge/🔌_API-222?style=for-the-badge" alt="API"/></a>
-</p>
+Fountain-coded animated QR codes. No cables. No network path. No pairing. No app. No cloud. Just light.
 
 ---
 
-> 🌟 **A pure-PHP web app that turns any file into a fountain-coded stream of animated QR codes.**  
-> One device plays the stream on its screen, the other reads it through its camera.  
-> **No cables. No network path. No pairing. No app. No cloud. Just light.** ✨
+<p>
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 8.2"/>
+  <img src="https://img.shields.io/badge/Apache-2.4-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache 2.4"/>
+  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="Vanilla JS"/>
+  <img src="https://img.shields.io/badge/QR-Fountain-FF6B6B?style=flat-square" alt="Fountain QR"/>
+  <img src="https://img.shields.io/badge/No_NPM-success?style=flat-square" alt="No NPM"/>
+  <img src="https://img.shields.io/badge/No_Node-success?style=flat-square" alt="No Node"/>
+  <img src="https://img.shields.io/badge/No_Build_Step-success?style=flat-square" alt="No Build Step"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT License"/>
+</p>
+
+<p>
+  <a href="#-overview"><img src="https://img.shields.io/badge/Overview-222?style=flat-square" alt="Overview"/></a>
+  <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-222?style=flat-square" alt="Quick Start"/></a>
+  <a href="#-how-it-works"><img src="https://img.shields.io/badge/How_It_Works-222?style=flat-square" alt="How It Works"/></a>
+  <a href="#-api-reference"><img src="https://img.shields.io/badge/API-222?style=flat-square" alt="API"/></a>
+  <a href="#-related-work"><img src="https://img.shields.io/badge/Related_Work-222?style=flat-square" alt="Related Work"/></a>
+  <a href="#-license"><img src="https://img.shields.io/badge/License-222?style=flat-square" alt="License"/></a>
+</p>
 
 </div>
 
@@ -447,36 +442,42 @@ Zero `npm`. Zero `node`. Zero `TypeScript`. Drop the folder in `htdocs/` and it 
 
 ---
 
-## 📜 License
+## 🙏 Related Work
 
-**MIT** — see [`LICENSE`](./LICENSE). Vendored libraries keep their own licenses in their headers:
+The idea of beaming a file from a screen to a camera using QR codes — and the observation that **fountain codes make the channel dramatically more robust** than naive sequential chunking — was arrived at independently in several places. This project is one of them. The other takes are all worth a look; they explore the same idea space with different trade-offs, and any of them may be a better fit for your use case.
 
-| Library | License |
-|---|---|
-| 🟦 [Nayuki QR-Code-generator](https://github.com/nayuki/QR-Code-generator) | MIT |
-| 🟦 [zxing-cpp / zxing-wasm](https://github.com/Sec-ant/zxing-wasm) | Apache-2.0 |
-| 🟦 [jsQR](https://github.com/cozmo/jsQR) | MIT |
+| Project | Year | Approach | Notes |
+|---|---|---|---|
+| [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) | — | Fountain-coded QR (LT) in the browser, Vite + TypeScript | The original TypeScript edition; this PHP port mirrors its protocol and UX bit-for-bit. |
+| [`mohankumarelec/airgapped-qr-code-transfer`](https://github.com/mohankumarelec/airgapped-qr-code-transfer) | — | Browser-based QR file transfer with compression and sequential chunking | Discovered after publicly demoing this project — convergent evolution in action. |
+| [`divan/txqr`](https://github.com/divan/txqr) | 2018 | Animated QR + fountain codes in Go | One of the earliest well-known takes; ships two excellent write-ups on why fountain coding beats sequential looping. |
+| [`sz3/libcimbar`](https://github.com/sz3/libcimbar) | — | Goes past QR entirely with a custom high-density color code | Purpose-built for the screen-to-camera channel; significantly higher goodput than any QR-only design. |
+
+> 💡 **Convergent evolution** is a good sign: it usually means the underlying constraints are real, and the idea is the natural shape of the solution. If you're researching this space, reading all four is time well spent.
+
+### 🙏 Acknowledgements
+
+- **Original concept & UX** — [`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer) (Vite + TypeScript). This edition is a **faithful PHP port**: same protocol, same UX, zero `node` / `npm` / build step.
+- **Vendored libraries** (each under their own license, see headers):
+  - [Nayuki QR-Code-generator](https://github.com/nayuki/QR-Code-generator) — MIT
+  - [zxing-cpp / zxing-wasm](https://github.com/Sec-ant/zxing-wasm) — Apache-2.0
+  - [jsQR](https://github.com/cozmo/jsQR) — MIT
+- **Adjacent ideas** — see the table above. Each of those projects sharpened this designer's intuition for what works on the optical channel, even where the implementations differ.
 
 ---
 
-## 🙏 Credits
+## 📜 License
 
-A faithful PHP port of the original  
-[`bashalarmistalt/decimen-optical-transfer`](https://github.com/bashalarmistalt/decimen-optical-transfer)  
-(Vite + TypeScript) — **same UX, zero Node**.
+**MIT** — see [`LICENSE`](./LICENSE).
 
 ---
 
 <div align="center">
 
-### 🪄 _"The payload travels as light."_ 🪄
+<sub>Built on Apache + PHP · No JavaScript framework · No build step</sub>
 
-<p align="center">
-  <sub>Built with 🧡 on Apache + PHP · No JavaScript framework required · No build step</sub>
-</p>
+<br/>
 
-<p align="center">
-  <a href="#-decimen--optical-transfer-">⬆️ Back to top</a>
-</p>
+<sub><i>The payload travels as light.</i></sub>
 
 </div>
