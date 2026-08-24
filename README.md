@@ -98,11 +98,13 @@ https://<this-pc-LAN-IP>/decimen.dfs.lan/receive.php
 
 ✅ Accept the cert warning **once** (iOS: *Show Details → visit this website* · Android: *Advanced → Proceed*). The page becomes a **secure context** and the camera unlocks.
 
+
 > 💡 `http://localhost/...` is exempt from the HTTPS rule — useful for testing on a single machine.
 
 ---
 
 ## 🧠 How It Works
+
 
 ```mermaid
 flowchart LR
